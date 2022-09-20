@@ -82,42 +82,37 @@ class BankAccount
             System.out.println("=============================================================================");
             System.out.println();
 
-            switch (option)
-            {
-                case "A":
+            switch (option) {
+                case "A" -> {
                     System.out.println("-----------------------------------------------------------");
                     System.out.println("Balance: " + balance);
                     System.out.println("-----------------------------------------------------------");
                     System.out.println();
-                    break;
-                case "B":
+                }
+                case "B" -> {
                     System.out.println("-----------------------------------------------------------");
                     System.out.println("Enter Amount to Deposit");
                     System.out.println("-----------------------------------------------------------");
                     int amount1 = nick.nextInt();
                     deposit(amount1);
                     System.out.println();
-                    break;
-                case "C":
+                }
+                case "C" -> {
                     System.out.println("-----------------------------------------------------------");
                     System.out.println("Enter Amount to Withdraw");
                     System.out.println("-----------------------------------------------------------");
                     int amount2 = nick.nextInt();
                     withdraw(amount2);
                     System.out.println();
-                    break;
-                case "D":
+                }
+                case "D" -> {
                     System.out.println("-----------------------------------------------------------");
                     showPreviousTransaction();
                     System.out.println("-----------------------------------------------------------");
                     System.out.println();
-                    break;
-                case "E":
-                    System.out.println("************************************************************");
-                    break;
-                default:
-                    System.out.println("Invalid Option! Please enter again.");
-                    break;
+                }
+                case "E" -> System.out.println("************************************************************");
+                default -> System.out.println("Invalid Option! Please enter again.");
             }
         }while (!option.equals("E"));
         System.out.println("Thank You for using our services.");
